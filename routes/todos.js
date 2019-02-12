@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var todoDb = require('../models/todo')
+var Todo = require('../models/todo')
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   res.render('todos/index', {
-    todos: todoDb.getAll()
+    todos: Todo.getAll()
   });
 });
 

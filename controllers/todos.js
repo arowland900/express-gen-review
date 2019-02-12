@@ -1,3 +1,4 @@
+var Todo = require('../models/todo');
 
 module.exports = {
     index
@@ -6,6 +7,6 @@ module.exports = {
 
 function index(req, res) {
     res.render('todos/index', {
-        todos: todoDb.getAll()
+        todos: Todo.getAll()
     });
 }
